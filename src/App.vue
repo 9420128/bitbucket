@@ -19,6 +19,7 @@ form{
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-size: 14px;
 }
 
 .container {
@@ -27,11 +28,11 @@ form{
   max-width: 1216px;
 }
 
-button, input {
+.button, .search__input {
   overflow: visible;
   border-radius: 0;
   font-family: 'Merriweather', serif;
-  font-weight: 400;
+  font-size: 14px;
   line-height: 48px;
   box-sizing: border-box;
   transition: .3s;
@@ -39,5 +40,6 @@ button, input {
 
 a {
   transition: .3s;
+  text-decoration: none;
 }
 </style>

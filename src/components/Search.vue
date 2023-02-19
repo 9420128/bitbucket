@@ -17,13 +17,15 @@ export default {
 .search{
   position: relative;
   margin-left: auto;
-  height: 48px;
-  width: 416px;
-  //padding-left: 48px;
+  max-width: 416px;
+  box-sizing: border-box;
+  padding-left: 48px;
+  display: flex;
+  flex: 1;
 
   &__input{
     border: 1px solid #E1E1E1;
-    height: 100%;
+    height: 48px;
     width: 100%;
     background-color: inherit;
     color: #9F9F9F;
@@ -37,6 +39,7 @@ export default {
     top: 0;
     right: 0;
     bottom: 0;
+    border: none;
   }
 }
 

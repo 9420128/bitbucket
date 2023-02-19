@@ -1,5 +1,5 @@
 <template>
-<button class="button" :class="classButton" :id="id" v-html="text"></button>
+<a :href="url" class="button" :class="classButton" :id="id" v-html="text"></a>
 </template>
 
 <script>
@@ -14,7 +14,11 @@ export default {
       type: String,
       default: ''
     },
-    id: Number
+    id: Number,
+    url: {
+      type: String,
+      default: '#',
+    }
   },
 }
 </script>
@@ -30,7 +34,7 @@ export default {
   color: white;
   font-weight: 700;
   border: none;
-  min-width: 112px;
+  flex: 1;
 
   &:hover{
     background-color: #776763;

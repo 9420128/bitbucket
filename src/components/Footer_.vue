@@ -47,4 +47,6 @@ export default {
     display: flex;
   }
 }
+
+@import "../assets/style/media";
 </style>

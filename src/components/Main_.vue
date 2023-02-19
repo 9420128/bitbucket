@@ -2,18 +2,19 @@
 <main class="main">
   <div class="container">
     <h1>{{name}}</h1>
-    <div class="card__wrap">
-      <Card
-          v-for="item in GOODS" :key="item.id"
-          :id="item.id"
-          :img="item.img"
-          :name="item.name"
-          :author="item.author"
-          :status="item.status"
-          :sale="item.sale"
-          :price="item.price"
-          :cartFlag="storageCartRender(item.id)"
-      />
+    <div class="grid">
+      <div class="grid__item" v-for="item in GOODS" :key="item.id">
+        <Card
+            :id="item.id"
+            :img="item.img"
+            :name="item.name"
+            :author="item.author"
+            :status="item.status"
+            :sale="item.sale"
+            :price="item.price"
+            :cartFlag="storageCartRender(item.id)"
+        />
+      </div>
     </div>
   </div>
 </main>
@@ -41,7 +42,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .main{
   flex: 1 0 auto;
 }
@@ -58,10 +59,17 @@ h1{
   color: #343030;
 }
 
-.card__wrap{
+.grid{
   display: flex;
-  width: 100%;
-  gap: 32px;
-  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin: 0 0 0 -32px;
+  padding: 0;
+
+  &__item{
+    width: 25%;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    padding-left: 32px;
+  }
 }
 </style>

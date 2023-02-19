@@ -91,10 +91,7 @@ export default {
 
 <style lang="scss">
 .card{
-  max-width: 280px;
-  height: 328px;
   border: 1px solid #E1E1E1;
-  //border-radius: 4px 4px 0 0;
 
   &__disable{
     opacity: .5;
@@ -124,6 +121,7 @@ export default {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    box-sizing: border-box;
   }
 }
 
