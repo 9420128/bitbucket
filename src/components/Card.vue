@@ -84,6 +84,9 @@ export default {
             btn.classList.add('button__active')
             console.log(data)
           })
+          .catch(error => {
+            console.error('Ошибка ответа сервера: ', error);
+          })
     }
   }
 }

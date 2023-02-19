@@ -18,7 +18,6 @@ export default {
   position: relative;
   margin-left: auto;
   max-width: 416px;
-  box-sizing: border-box;
   padding-left: 48px;
   display: flex;
   flex: 1;

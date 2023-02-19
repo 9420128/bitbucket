@@ -40,6 +40,5 @@ form{
 
 a {
   transition: .3s;
-  text-decoration: none;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-<a :href="url" class="button" :class="classButton" :id="id" v-html="text"></a>
+<button class="button" :class="classButton" :id="id" v-html="text"></button>
 </template>
 
 <script>
@@ -15,10 +15,6 @@ export default {
       default: ''
     },
     id: Number,
-    url: {
-      type: String,
-      default: '#',
-    }
   },
 }
 </script>
