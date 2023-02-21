@@ -1,6 +1,13 @@
 <template>
   <nav class="menu">
-    <a v-for="item in menu" :key="item.text" :href="'/' + item.url" class="menu__item">{{item.text}}</a>
+    <router-link
+        class="menu__item"
+        v-for="item in menu"
+        :key="item.text"
+        :to="item.url"
+    >
+      {{item.text}}
+    </router-link>
   </nav>
 </template>
 
@@ -9,11 +16,11 @@ export default {
   name: "Menu_",
   data: () => ({
     menu: [
-      {url: 'catalog', text: 'Каталог'},
-      {url: 'delivery', text: 'Доставка'},
-      {url: 'pay', text: 'Оплата'},
-      {url: 'contacts', text: 'Контакты'},
-      {url: 'about', text: 'О галерее'},
+      {url: '', text: 'Каталог'},
+      {url: '', text: 'Доставка'},
+      {url: '', text: 'Оплата'},
+      {url: '', text: 'Контакты'},
+      {url: '', text: 'О галерее'},
     ]
   })
 }
