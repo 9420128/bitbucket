@@ -1,16 +1,21 @@
 <template>
   <nav class="menu">
-    <a href="#" class="menu__item">Каталог</a>
-    <a href="#" class="menu__item">Доставка</a>
-    <a href="#" class="menu__item">Оплата</a>
-    <a href="#" class="menu__item">Контакты</a>
-    <a href="#" class="menu__item">О галерее</a>
+    <a v-for="item in menu" :key="item.text" :href="'/' + item.url" class="menu__item">{{item.text}}</a>
   </nav>
 </template>
 
 <script>
 export default {
-  name: "Menu_"
+  name: "Menu_",
+  data: () => ({
+    menu: [
+      {url: 'catalog', text: 'Каталог'},
+      {url: 'delivery', text: 'Доставка'},
+      {url: 'pay', text: 'Оплата'},
+      {url: 'contacts', text: 'Контакты'},
+      {url: 'about', text: 'О галерее'},
+    ]
+  })
 }
 </script>
 

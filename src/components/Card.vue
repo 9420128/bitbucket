@@ -1,6 +1,6 @@
 <template>
 <div class="card" :class="{card__disable : status}">
-  <router-link to="/" class="card__link">
+  <router-link :to="'?goods=' + id" class="card__link">
     <img class="card__img" :src="require('../assets/img/card/' + img)" :alt="name">
   </router-link>
   <h2 class="card__heading">«{{name}}»<br>{{author}}</h2>
